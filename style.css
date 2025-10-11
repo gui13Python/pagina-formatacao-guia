@@ -917,5 +917,66 @@ a:focus, button:focus {
         background: none;
         color: var(--text-primary);
     }
+
+
+    img {
+    max-width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
 }
 
+    .image-container img {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+
+
+
+
+
+}
+
+
+
+@media (max-width: 470px) {
+    #atencao{
+        font-size: 14px;
+    }
+    #pd{
+        font-size: 14px;
+    }
+    #red{
+        font-size: 14px;
+    }
+    #md{
+        font-size: 14px;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .seta2{
+        width: 2rem;
+    }
+
+    html, body {
+    overflow-x: hidden;
+}
+
+.site-footer {
+    width: 100%;
+    height: auto;
+    padding: auto;
+    max-width: 100%;
+    margin-top: 1rem;
+
+
+
+}
+
+
+
+
+
+}
