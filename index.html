@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- SEO Meta Tags -->
+    <title>Como Formatar e Reinstalar o Windows com Pendrive USB e Rufus | Guia Completo 2025</title>
+    <meta name="description" content="Guia completo e detalhado para formatar seu computador e reinstalar o Windows 10/11 usando pendrive USB e Rufus. Passo a passo com imagens para iniciantes.">
+    <meta name="keywords" content="formatar computador, reinstalar Windows, pendrive bootável, Rufus, Windows 10, Windows 11, formatar PC, instalação Windows, BIOS UEFI, drivers Windows">
+    <meta name="author" content="Guia Windows">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Portuguese">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Como Formatar e Reinstalar o Windows com Pendrive USB e Rufus">
+    <meta property="og:description" content="Guia completo e detalhado para formatar seu computador e reinstalar o Windows 10/11 usando pendrive USB e Rufus.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://seusite.com">
+    <meta property="og:image" content="https://seusite.com/images/og-image.png">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Como Formatar e Reinstalar o Windows com Pendrive USB e Rufus">
+    <meta name="twitter:description" content="Guia completo e detalhado para formatar seu computador e reinstalar o Windows 10/11.">
+    <meta name="twitter:image" content="https://seusite.com/images/og-image.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://seusite.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Como Formatar e Reinstalar o Windows com Pendrive USB e Rufus",
+      "description": "Guia completo e detalhado para formatar seu computador e reinstalar o Windows 10/11 usando pendrive USB e Rufus.",
+      "author": {
+        "@type": "Person",
+        "name": "Guia Windows"
+      },
+      "datePublished": "2025-10-10",
+      "dateModified": "2025-10-10",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Guia Windows",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://seusite.com/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://seusite.com"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="main-nav">
+                <div class="logo">
+                    <h1>Guia Windows</h1>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#preparativos">Preparativos</a></li>
+                    <li><a href="#rufus">Rufus</a></li>
+                    <li><a href="#instalacao">Instalação</a></li>
+                    <li><a href="#pos-formatacao">Pós-Formatação</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Guia Completo: Como Formatar e Reinstalar o Windows com Pendrive USB e Rufus</h1>
+                <p class="hero-subtitle">Aprenda passo a passo como dar uma nova vida ao seu PC, remover vírus e reinstalar o Windows 10 ou 11 de forma segura e profissional.</p>
+                <a href="#preparativos" class="btn btn-primary">Começar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Introdução -->
+            <article class="content-section" id="introducao">
+                <header class="section-header">
+                    <h2>Por que e Quando Formatar seu Computador?</h2>
+                </header>
+                <div class="section-body">
+                    <p>Bem-vindo ao guia definitivo para formatar seu computador com Windows. Se você chegou até aqui, provavelmente deseja dar uma nova vida ao seu PC, resolver problemas de desempenho, remover vírus ou simplesmente reinstalar o sistema operacional do zero. Formatar pode parecer complicado, mas com as ferramentas certas e este passo a passo detalhado, você verá que é um processo acessível a todos.</p>
+                    
+                    <p>Neste guia completo, vamos utilizar um <strong>pendrive USB</strong> e um programa chamado <strong>Rufus</strong> para criar uma mídia de instalação do Windows. Depois, mostraremos como configurar seu computador para iniciar a partir desse pendrive e instalar o sistema operacional Windows do zero.</p>
+                    
+                    <div class="alert alert-warning">
+                        <strong>Atenção Importante:</strong> Formatar um computador apaga TODOS os dados do disco rígido onde o sistema será instalado. Certifique-se de fazer backup de todos os seus arquivos importantes (documentos, fotos, vídeos, músicas, etc.) para um local seguro (outro HD, pendrive externo, nuvem) antes de começar!
+                    </div>
+                </div>
+            </article>
+
+            <!-- Google AdSense Placeholder 1 -->
+            <div class="ad-container" id="ad-slot-1">
+                <!-- Seu código do Google AdSense aqui -->
+            </div>
+
+            <!-- Capítulo 1: Preparativos -->
+            <article class="content-section" id="preparativos">
+                <header class="section-header">
+                    <span class="chapter-number">Capítulo 1</span>
+                    <h2>Preparativos Essenciais para Formatar o Windows</h2>
+                </header>
+                <div class="section-body">
+                    <p>Antes de começar o processo de formatação, é fundamental reunir algumas ferramentas e fazer verificações importantes. A preparação adequada garante que o processo seja realizado sem problemas e que você não perca dados importantes.</p>
+                    
+                    <h3>1. Pendrive USB: Seu Dispositivo de Instalação</h3>
+                    <a href="https://s.shopee.com.br/1VqTGxkT16" target="_blank" rel="noopener" rel="nollfow">
+                    <img src="./imagens/br-11134207-7r98o-m8xlixo333g934.jpeg" width="150" alt="imagen de um pendriver sandisk"> </a>
+                    <p><h6 id="descricaop">se voce nao tem um pendriver pode consseguir <a href=""> <span id="red"><small >aqui</small></span></a></h6></p>
+                    <p >Você precisará de um <strong>pendrive com no mínimo 8GB de capacidade</strong>. Para o Windows 10 ou 11, recomendamos um pendrive de 16GB ou 32GB para garantir espaço suficiente. É importante ressaltar que todos os dados no pendrive serão apagados durante o processo, então certifique-se de fazer backup de qualquer arquivo importante que esteja nele.</p>
+                    
+                    <div class="info-box">
+                        <h4>Especificações do Pendrive:</h4>
+                        <ul>
+                            <li>Capacidade mínima: 8GB</li>
+                            <li>Capacidade recomendada: 16GB ou superior</li>
+                            <li>Velocidade: USB 3.0 ou superior (para instalação mais rápida)</li>
+                        </ul>
+                    </div>
+                    
+                    <h3 id="iso">2. Imagem ISO do Windows: O Sistema Operacional</h3>
+                    <div class="iso">
+                        <img src="./imagens/ISO.jpg" alt="imagem iso do windows 10 e 11" width="150">
+                        BAIXAR  FERRAMENTA MediaCreationTool_22H2.exe <br>  <a id="#win" href="https://www.microsoft.com/pt-br/software-download/windows10" target="_blank"> SITE OFICIAL AQUI <h6>https://www.microsoft.com/pt-br/software-download/windows10</h6> </a>
+                        ou a (ISO) para Windows 11 <br> <a href="https://www.microsoft.com/pt-br/software-download/windows11" target="_blank"> SITE OFICIAL AQUI <h6>https://www.microsoft.com/pt-br/software-download/windows11</h6> </a>
+                        <P class="info">NUMCA BAIXE DE SITE QUE NÃO SEJA OFICIAL</P>
+                       
+                    </div>
+                    <p>Uma imagem ISO é como um "CD virtual" que contém todos os arquivos de instalação do Windows. Você pode baixar a imagem ISO oficial diretamente do site da Microsoft, garantindo assim que está instalando uma versão legítima e segura do sistema operacional.</p>
+                    
+                    <h4>Como Baixar a ISO do Windows 10 ou 11:</h4>
+                    
+                    <p>Para <strong>Windows 10</strong>, pesquise por "Baixar Windows 10 disco imagem (ISO) ou no link acima  site oficial da Microsoft. Lá, você encontrará a Ferramenta de Criação de Mídia ( <span id="md">Media Creation Tool </span>) que pode baixar a ISO diretamente.</p>
+                    
+                    <p>Para <strong>Windows 11</strong>, pesquise por "Baixar Windows 11" no Google e procure a seção de "Baixar Imagem de Disco (ISO) do Windows 11 para dispositivos x64"  ou acesse o link acima do  site oficial da Microsoft. </p>
+                    
+                    <div class="step-by-step">
+                        <h4>Passo a Passo para Criar a Imagem ISO:</h4>
+                        <ol>
+                            <li>Clique no botão "Baixar agora" no site da Microsoft</li>
+                            <li>Escolha um local no seu computador para guardar o arquivo executável (MediaCreationTool_22H2.exe)</li>
+                            <li>Aguarde o download completar</li>
+                            <li>Vá até a pasta onde foi salvo o arquivo (geralmente em Downloads)</li>
+                            <li>Dê dois cliques no arquivo para abrir</li>
+                            <li>Aceite os termos da Microsoft clicando em "Aceitar"</li>
+                            <li>Escolha a opção "Criar mídia de instalação" e clique em "Avançar"</li>
+                            <li>Selecione "Arquivo ISO" e clique em "Avançar"</li>
+                            <li>Escolha onde deseja salvar a imagem ISO e aguarde o processo</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="image-container">
+                        <p> "Tela da Ferramenta de Criação de Mídia do Windows para aceitar termos" </p>
+                        <p class="image-caption">Aceite os termos da Microsoft na Ferramenta de Criação de Mídia como mostra na imagem abaixo </p>
+                        <img src="./imagens/aviso.png" alt="aceitar termos" width="500">
+                    </div>
+                    <div class="image-container">
+                        <p>"Tela da Ferramenta de Criação de Mídia do Windows para escolher a opção"</p>
+                        <p class="image-caption">Escolha a opção 'Criar mídia de instalação como na image'</p>
+                        <img src="./imagens/criar-midia.png" alt="imagem criar midia de instalacao" width="500">
+                    </div>
+                    <div class="image-container">
+                        <p>"Tela da Ferramenta de Criação de Mídia do Windows para selecionar Arquivo ISO"</p>
+                        <p class="image-caption">Selecione 'Arquivo ISO e clique em Avançar'</p>
+                         <img src="./imagens/criar-midia.png" alt="imagem criar midia de instalacao" width="500">
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <strong>Importante:</strong> Certifique-se de baixar a versão correta (Home, Pro, etc.) e a arquitetura (64 bits) que você deseja instalar. A maioria dos computadores modernos utiliza a versão de 64 bits.
+                        <div class="image-container">
+                        <img src="./imagens/arquitetura.png" alt="imagem de arquitetura" width="500">
+                        
+                        <img src="./imagens/arquivo-iso.png" alt="imagem de arquivo iso" width="500">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Google AdSense Placeholder 2 -->
+            <div class="ad-container" id="ad-slot-2">
+                <!-- Seu código do Google AdSense aqui -->
+            </div>
+
+            <!-- Capítulo 2: Baixando o Rufus -->
+            <article class="content-section" id="rufus">
+                <header class="section-header">
+                    <span class="chapter-number">Capítulo 2</span>
+                    <h2 id="aqui_rufus">Baixando e Configurando o Rufus</h2>
+                </header>
+                <div class="section-body">
+                    <p>O <strong>Rufus</strong> é um pequeno e poderoso programa gratuito que nos ajudará a "gravar" a imagem ISO do Windows no seu pendrive, tornando-o bootável (capaz de iniciar o computador). É uma ferramenta confiável e amplamente utilizada por profissionais de TI em todo o mundo.</p>
+                    
+                    <h3 >Como Baixar o Rufus</h3>
+                    <div class="step-by-step">
+                        <ol>
+                            <li>Abra seu navegador de internet (Google Chrome, Firefox, Edge, etc.)</li>
+                            <li>Na barra de pesquisa, digite "rufus.ie" e pressione Enter, ou acesse diretamente: <a  href="https://rufus.ie/pt/" target="_blank" rel="noopener noreferrer">https://rufus.ie/pt/</a></li>
+                            <li>Você será direcionado para o site oficial do Rufus</li>
+                            <img src="./imagens/rufu-pagina.png" width="500" alt="pagina do Rufus">
+                            <li>Role a página para baixo até a seção de downloads</li>
+                            <li>Procure a versão mais recente do Rufus (por exemplo, "RUFUS-4.11.exe" ou versão superior)</li>
+                            <img src="./imagens/versao-rufus.png" width="500" alt="imagem versao do rufus">
+                            <li>Clique  no nome exemplo  <span id="versao_exemplo">(rufus-4.11.exe)</span> uma vez para fazer o download e salve no local de sua preferência</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="image-container">
+                            
+                        <a href="#aqui_rufus" rel="noopener noreferrer">
+                        <img src="./imagens/seta-cima.png" width="50" alt="Site oficial do Rufus para download" loading="lazy"> </a>
+                        <p class="image-caption">Site oficial do Rufus para download</p>
+                    </div>
+                    
+                    <h3>Criando o Pendrive Bootável com Rufus</h3>
+                    <p>Agora que você tem o Rufus e a imagem ISO do Windows, é hora de transformá-los em um pendrive bootável. Este processo é simples, mas requer atenção aos detalhes para garantir que tudo funcione corretamente.</p>
+                    
+                    <div class="step-by-step">
+                        <h4 id="guia">Passo a Passo Detalhado:</h4>
+                        <ol>
+                            <li><strong>Conecte seu Pendrive:</strong> Insira o pendrive USB que você preparou (com pelo menos 8GB e sem arquivos importantes) em uma porta USB do seu computador deverá ser algo igual na imagem abaixo.</li>
+                            <img src="./imagens/no-pc.jpeg" width="200" alt="imagem de um pendriver no pc">
+                            <li><strong>Execute o Rufus:</strong> Vá para a pasta onde você salvou o executável do Rufus e dê dois cliques para abrir, com o pendrive já conectado ao computador.</li>
+                            <img src="./imagens/executando-rufus.png" alt="executando-rufus">
+                            <li><strong>Permita as Alterações:</strong> Se o Windows perguntar se você permite que o aplicativo faça alterações no seu dispositivo, clique em "Sim".</li>
+                            <li><strong>Verifique o Dispositivo:</strong> O Rufus detectará automaticamente seu pendrive. Verifique se o dispositivo correto está selecionado.</li>
+                            <li><strong>Selecione a ISO:</strong> Clique no botão "SELECIONAR" como mostra na imagem acima  e navegue até a pasta onde você salvou a imagem ISO do Windows. Dê dois cliques na ISO ou selecione e clique em "Abrir".</li>
+                            <li><strong>Configure as Opções:</strong> Você pode renomear o pendrive no campo "Rótulo do volume" se desejar.</li>
+                            <li><strong>Inicie o Processo:</strong> Clique no botão "INICIAR". <span id="atencao">ATENÇAO! </span> com essa parte pois vai apagar todo seu <span id="pd">Pendriver</span> antes do processo ser feito</li>
+                            <li><strong>Confirme a Ação:</strong> O programa perguntará se você tem certeza. Verifique novamente se selecionou o pendrive correto e clique em "Sim".</li>
+                            <li><strong>Aguarde a Conclusão:</strong> O processo pode levar de 10 a 30 minutos. Não desligue o computador durante este período.</li>
+                            <img id="aguarde" src="./imagens/aguarde.png" width="500" alt=" imagem aguarde rufus terminalo">
+                            <li><strong>Finalize:</strong> Quando a barra de progresso estiver completamente verde e o status mostrar "PRONTO", clique em "FECHAR".</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="image-container">
+                        <a href="#guia">
+                        <img src="./imagens/seta-cima.png" width="50" alt="Interface do Rufus com pendrive detectado e botão selecionar" loading="lazy"> </a>
+                        <p class="image-caption">Interface do Rufus com pendrive detectado</p>
+                    </div>
+
+                    
+                    <div class="info-box">
+                        <h4>Entendendo as Opções de Partição:</h4>
+                        <p><strong>GPT/UEFI:</strong> Para computadores modernos (fabricados após 2012-2014). Esta é a opção mais comum atualmente.</p>
+                        <p><strong>MBR/BIOS:</strong> Para computadores mais antigos (antes de 2010-2012) ou alguns notebooks específicos.</p>
+                        <p>Se não tiver certeza, tente GPT primeiro. O Rufus geralmente seleciona automaticamente a opção correta após você escolher a ISO.</p>
+                    </div>
+                    
+                    <div class="alert alert-warning">
+                        <strong>Atenção:</strong> Verifique com certeza de que está selecionando o pendrive correto, e não outro disco rígido. Todos os dados no dispositivo selecionado serão apagados permanentemente.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Google AdSense Placeholder 3 -->
+            <div class="ad-container" id="ad-slot-3">
+                <!-- Seu código do Google AdSense aqui -->
+            </div>
+
+            <!-- Capítulo 3: Configuração de Boot -->
+            <article class="content-section" id="boot">
+                <header class="section-header">
+                    <span class="chapter-number">Capítulo 3</span>
+                    <h2>Configurando o Boot: Iniciando pelo Pendrive</h2>
+                </header>
+                <div class="section-body">
+                    <p>Com o pendrive bootável em mãos, o próximo passo é fazer seu computador iniciar a partir dele, em vez de iniciar o Windows que já está instalado. Isso é feito acessando as configurações de <strong>BIOS/UEFI</strong> do seu computador.</p>
+                    
+                    <div class="alert alert-info">
+                        <strong>Importante:</strong> Os nomes exatos dos menus e as teclas podem variar bastante entre diferentes fabricantes de computadores (Dell, HP, Acer, Lenovo, ASUS, Samsung, etc.) e modelos. No entanto, o conceito é o mesmo.
+                    </div>
+                    
+                    <div class="image-container">
+                        <img src="./imagens/bios.png" width="600" alt="Exemplo de tela BIOS/UEFI" loading="lazy">
+                        <p class="image-caption">Exemplo de tela BIOS/UEFI <img id="seta2" src="./imagens/seta2.png"   width="20" alt=""></p>
+                    </div>
+                    
+                    <h3>Passo a Passo para Configurar o Boot</h3>
+                    <div class="step-by-step">
+                        <ol>
+                            <li><strong>Conecte o Pendrive:</strong> Certifique-se de que o pendrive USB bootável que você criou com o Rufus esteja conectado a uma porta USB do computador que você deseja formatar.</li>
+                            <li><strong>Reinicie o Computador:</strong> Desligue completamente o computador e, em seguida, ligue-o novamente com o pendrive conectado.</li>
+                            <li><strong>Acesse o Menu de Boot ou BIOS/UEFI:</strong> Assim que você ligar o computador (e antes que o Windows comece a carregar), pressione repetidamente uma tecla específica para entrar no Menu de Boot ou na Configuração do BIOS/UEFI.</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h4>Teclas Comuns para Acessar o Boot:</h4>
+                        <p><strong>Menu de Boot:</strong> F11, F12, F10, ESC, F8</p>
+                        <p><strong>BIOS/UEFI Setup:</strong> DEL (Delete), F2, F10, F1</p>
+                        <p><strong>Dica:</strong> Preste atenção à tela inicial do seu computador logo ao ligar. Muitas vezes, ela exibe uma mensagem rápida como "Press F12 for Boot Menu" ou "Press DEL to enter Setup".</p>
+                    </div>
+                    
+                    <h3>Configurando a Ordem de Boot</h3>
+                    <p>Após acessar a BIOS/UEFI, procure pela aba ou seção chamada "Boot" ou "Boot Order" (Ordem de Boot). Você verá uma lista de dispositivos pelos quais o computador pode iniciar. Procure o seu pendrive USB (ele pode aparecer com o nome do fabricante do pendrive ou como "USB HDD" ou "UEFI: [nome do pendriver]").</p>
+                    <img src="./imagens/bios2.png" width="500" alt="imagem de bios2" loading="lazy">
+                    
+                    <div class="step-by-step">
+                        <ol>
+                            <li>Use as setas do teclado para navegar até o pendrive</li>
+                            <li>Mova o pendrive para a primeira posição (geralmente usando as teclas F5 ou F6)</li>
+                            <li>Pressione F10 para salvar as alterações</li>
+                            <li>Confirme pressionando Enter</li>
+                            <li>O computador será reiniciado</li>
+                            <li>Quando aparecer a mensagem "Pressione qualquer tecla para iniciar...", pressione a barra de espaço</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="alert alert-success">
+                        <strong>Sucesso!</strong> Se tudo correr bem, você verá a tela de instalação do Windows. Não retire o pendrive ainda!
+                    </div>
+                </div>
+            </article>
+
+            <!-- Google AdSense Placeholder 4 -->
+            <div class="ad-container" id="ad-slot-4">
+                <!-- Seu código do Google AdSense aqui -->
+            </div>
+
+            <!-- Capítulo 4: Instalação do Windows -->
+            <article class="content-section" id="instalacao">
+                <header class="section-header">
+                    <span class="chapter-number">Capítulo 4</span>
+                    <h2>Instalação do Windows: Passo a Passo Completo</h2>
+                </header>
+                <div class="section-body">
+                    <p>Agora que o computador iniciou pelo pendrive, vamos para a parte final: instalar o Windows! Este é o momento em que todo o trabalho de preparação se concretiza.</p>
+                    
+                    <h3>1. Configurações Iniciais</h3>
+                    <p>A primeira tela que você verá é a de "Instalação do Windows". Aqui você configurará o idioma, formato de hora e moeda, e o teclado.</p>
+                    
+                    <div class="image-container">
+                        <img src="./imagens/1telawindows.png" alt="Tela inicial de instalação do Windows" loading="lazy">
+                        <p class="image-caption">Tela inicial de instalação do Windows</p>
+                    </div>
+                    
+                    <div class="step-by-step">
+                        <ol>
+                            <li>Clique no botão <strong>"Instalar agora"</strong></li>
+                            <li>Na próxima tela, será solicitada a chave do produto. Se você não tem, clique em <strong>"Não tenho a chave do produto"</strong>.
+                                <img src="./imagens/nao tenho.png" alt="imagem de nao tenho a chave" width="500" loading="lazy"> <br>
+                                O Windows será ativado automaticamente após a instalação quando você se conectar à internet (se sua licença for digital).</li>
+                        </ol>
+                    </div>
+                    
+                    <h3>2. Selecionar Edição do Windows</h3>
+                    <p>Se sua ISO contiver várias edições (Home, Pro, etc.), selecione a versão do Windows que você deseja instalar e que corresponde à sua licença. A opção <strong>Windows Pro</strong> é recomendada para usuários que desejam mais recursos e controle.</p>
+                    
+                    <div class="image-container">
+                        <img src="./imagens/pro.png" alt="Tela de aceitação dos termos de licença do Windows" loading="lazy">
+                        <p class="image-caption">Selecione a edição do Windows que deseja instalar</p>
+                    </div>
+                    
+                    <h3>3. Termos de Licença</h3>
+                    <p>Leia os termos de licença do software, marque a caixa "Aceito os termos de licença" e clique em "Avançar".</p>
+                    
+                    <div class="image-container">
+                        
+                        <p class="image-caption">Aceite os termos de licença da Microsoft</p>
+                        <img src="./imagens/termos.png" alt="imagem de termos" width="500">
+                    </div>
+                    
+                    <h3>4. Tipo de Instalação</h3>
+                    <p>Esta é uma escolha crucial. Você verá duas opções:</p>
+                    <ul>
+                        <li><strong>Atualização:</strong> Mantém arquivos e configurações (não recomendado para formatação completa)</li>
+                        <li><strong>Personalizada: Instalar apenas o Windows (avançado):</strong> SELECIONE ESTA OPÇÃO. É ela que nos permite formatar o disco e fazer uma instalação limpa.</li>
+                    </ul>
+                    
+                    <div class="image-container">
+                        <img src="./imagens/particionar.png" alt="Tela de seleção do tipo de instalação do Windows" loading="lazy">
+                        <p class="image-caption">Escolha 'Personalizada: Instalar apenas o Windows (avançado)'</p>
+                    </div>
+                    
+                    <h3>5. Particionamento do Disco</h3>
+                    <p>Nesta tela, você verá todos os discos e partições disponíveis no seu computador. Este é o momento de formatar o disco onde o Windows será instalado.</p>
+                    
+                    <div class="alert alert-danger">
+                        <strong>Atenção Redobrada:</strong> Tenha certeza de qual disco você quer instalar o Windows. Geralmente é o "Disco 0". Se você tem vários discos, verifique o tamanho para ter certeza. Formatar o disco errado resultará em perda permanente de dados!
+                    </div>
+                    
+                    <div class="image-container">
+                        <img src="./imagens/particionar3.png" alt="Tela de particionamento de disco do Windows" loading="lazy">
+                        <p class="image-caption">Tela de particionamento de disco</p>
+                    </div>
+                    
+                    <div class="step-by-step">
+                        <h4>Como Particionar o Disco:</h4>
+                        <ol>
+                            <li>Selecione cada partição do disco que deseja formatar</li>
+                            <li>Clique em "Excluir" para cada partição</li>
+                            <li>Confirme a exclusão</li>
+                            <li>Após excluir todas as partições, você terá um "Espaço não alocado"</li>
+                            <li>Selecione o espaço não alocado</li>
+                            <li>Clique em "Novo" para criar uma nova partição</li>
+                            <li>Clique em "Aplicar" e depois em "OK"</li>
+                            <li>Selecione a partição primária criada</li>
+                            <li>Clique em "Avançar" para iniciar a instalação</li>
+                        </ol>
+                    </div>
+                    
+                    <h3>6. Processo de Instalação</h3>
+                    <p>O Windows começará a copiar arquivos, instalar recursos e atualizações. Este processo pode levar de 20 a 60 minutos, dependendo da velocidade do seu computador e do pendrive. O computador será reiniciado várias vezes automaticamente.</p>
+                    
+                    <div class="image-container">
+                        <img src="./imagens/copiandoWIN.png" alt="Processo de instalação do Windows" loading="lazy">
+                        <p class="image-caption">O Windows está sendo instalado</p>
+                    </div>
+                    
+                    <div class="alert alert-warning">
+                        <strong>Importante:</strong> Quando a tela ficar preta após a primeira reinicialização, <strong>retire o pendrive</strong> para evitar que o computador inicie novamente pelo pendrive.
+                    </div>
+                    
+                    <h3>7. Configurações Pós-Instalação</h3>
+                    <p>Após as reinicializações, o Windows fará as últimas configurações. Você será guiado por uma série de telas para:</p>
+                    
+                    <div class="step-by-step">
+                        <ul>
+                            <li><strong>Escolher sua região:</strong> Selecione "Brasil" e clique em "Sim"</li>
+                            <li><strong>Confirmar o layout do teclado:</strong> Selecione "Português (Brasil ABNT2)" e clique em "Sim"</li>
+                            <li><strong>Adicionar segundo layout:</strong> Você pode pular esta etapa clicando em "Pular"</li>
+                            <li><strong>Conectar à rede:</strong> Você pode conectar agora ou pular para fazer depois</li>
+                            <li><strong>Tipo de conta:</strong> Escolha "Configurar para uso pessoal" ou "Conta offline" se preferir</li>
+                            <li><strong>Nome do computador:</strong> Escolha um nome desejado para seu computador</li>
+                            <li><strong>Senha:</strong> Criar uma senha é opcional, mas recomendado para segurança</li>
+                            <li><strong>Configurações de privacidade:</strong> Revise e ajuste conforme sua preferência</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="image-container">
+                        <img src="./imagens/idioma.png" alt="Tela de escolha de região do Windows" loading="lazy">
+                        <p class="image-caption">Escolha sua região</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./imagens/teclado.png" alt="Tela de confirmação do layout do teclado" loading="lazy">
+                        <p class="image-caption">Confirme o layout do teclado</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./imagens/segundo-teclado.png" alt="Tela para pular a adição de segundo layout de teclado" loading="lazy">
+                        <p class="image-caption">Opção para pular a adição de segundo layout</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./imagens/pessoal.png" alt="Tela para pular a adição de segundo layout de teclado" loading="lazy">
+                        <p class="image-caption">Opção para conta pessoal ou uma organização</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./imagens/offiline.png" alt="Tela de escolha de conta online ou offline" loading="lazy">
+                        <p class="image-caption">Escolha entre conta online ou offline</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./imagens/inutil.png" alt="Tela de escolha de conta online ou offline" loading="lazy">
+                        <p class="image-caption">Escolha ou não para aproveitar o maximo de app da Microsoft</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./imagens/nome.png" alt="Tela para nomear o computador" loading="lazy">
+                        <p class="image-caption">Nomeie seu computador</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./imagens/senha.png" alt="Tela de criação de senha (opcional)" loading="lazy">
+                        <p class="image-caption">Crie uma senha (opcional)</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./imagens/priva1.png" alt="Tela de configurações de privacidade" loading="lazy">
+                        <p class="image-caption">Configurações de privacidade</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./imagens/priva2.png" alt="Tela de configurações de privacidade" loading="lazy">
+                        <p class="image-caption">Configurações de privacidade</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./imagens/dados.png" alt="Tela de configurações de privacidade" loading="lazy">
+                        <p class="image-caption">Configurações de privacidade</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./imagens/diaginostico.png" alt="Tela de configurações de privacidade" loading="lazy">
+                        <p class="image-caption">Configurações de privacidade</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./imagens/permitir-id.png" alt="Tela de configurações de privacidade" loading="lazy">
+                        <p class="image-caption">Configurações de privacidade</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./imagens/cortana.png" alt="Tela de aguarde final da instalação" loading="lazy">
+                        <p class="image-caption">Aguarde as últimas configurações</p>
+                    </div>
+                    
+                    <div class="alert alert-success">
+                        <strong>Parabéns!</strong> Finalmente, você verá a tela de boas-vindas do Windows e sua nova Área de Trabalho. Seu computador foi formatado e o Windows foi reinstalado com sucesso!
+                   
+                    <div class="image-container">
+                        <img src="./imagens/inicial.png" alt="Tela de aguarde final da instalação" loading="lazy">
+                        <p class="image-caption">Finalmente, você verá a tela de boas-vindas do Windows e sua nova Área de Trabalho</p>
+                    </div>
+                     </div>
+                </div>
+            </article>
+
+            <!-- Google AdSense Placeholder 5 -->
+            <div class="ad-container" id="ad-slot-5">
+                <!-- Seu código do Google AdSense aqui -->
+            </div>
+
+            <!-- Capítulo 5: Pós-Formatação -->
+            <article class="content-section" id="pos-formatacao">
+                <header class="section-header">
+                    <span class="chapter-number">Capítulo 5</span>
+                    <h2>Pós-Formatação: Otimizando seu Novo Sistema</h2>
+                </header>
+                <div class="section-body">
+                    <p>Agora que seu Windows está novinho em folha, há algumas coisas importantes a fazer para garantir que seu computador funcione perfeitamente e esteja protegido.</p>
+                    
+                    <h3>1. Instalar Drivers</h3>
+                    <p>É fundamental que todos os componentes do seu computador (placa de vídeo, placa de rede, placa de som, chipset, etc.) tenham os drivers corretos instalados. Os drivers são programas que permitem que o Windows se comunique adequadamente com o hardware do seu computador.</p>
+                    
+                    <div class="info-box">
+                        <h4>Duas Opções para Instalar Drivers:</h4>
+                        <p><strong>Opção 1 - Windows Update (Automático):</strong> Para a maioria dos computadores modernos, vá em Iniciar > Configurações > Windows Update. O sistema detectará e instalará muitos dos drivers automaticamente.</p>
+                        <p><strong>Opção 2 - Site do Fabricante (Recomendado):</strong> Para drivers críticos ou mais recentes, visite o site do fabricante do seu computador (Dell, HP, Acer, Lenovo, ASUS, etc.) ou dos componentes individuais (NVIDIA, AMD, Intel) e baixe os drivers mais recentes para o seu modelo específico.</p>
+                    </div>
+                    
+                    <div class="step-by-step">
+                        <h4>Ordem Recomendada de Instalação de Drivers:</h4>
+                        <ol>
+                            <li>Driver de rede (se o Wi-Fi não estiver funcionando)</li>
+                            <li>Driver do chipset</li>
+                            <li>Driver da placa de vídeo</li>
+                            <li>Driver de áudio</li>
+                            <li>Outros drivers específicos do seu hardware</li>
+                        </ol>
+                    </div>
+                    
+                    <h3>2. Executar Windows Update</h3>
+                    <p>Vá em Iniciar > Configurações > Windows Update e procure por atualizações. Instale todas as atualizações importantes para garantir a segurança e o bom funcionamento do sistema. Pode ser necessário reiniciar o computador várias vezes. Na maioria dos casos, isso acontecerá automaticamente.</p>
+                    
+                    <div class="image-container">
+                        <img src="./imagens/REDE.png" alt="Tela de conexão de rede após a instalação do Windows" loading="lazy">
+                        <p class="image-caption">Conecte-se à sua rede 
+                            <img src="./imagens/seta2.png" alt="seta-cima" width="20">
+                        </p>
+                    </div>
+                    
+                    <h3>3. Instalar Antivírus</h3>
+                    <p>Embora o Windows Defender (antivírus integrado do Windows) seja bom e suficiente para a maioria dos usuários, você pode optar por instalar um antivírus de terceiros de sua confiança, como Avast, AVG, Kaspersky, Norton, entre outros.</p>
+                    
+                    <h3>4. Instalar Programas Essenciais</h3>
+                    <p>Baixe e instale os programas que você usa diariamente, como navegador de internet, pacote Office, reprodutores de mídia, etc. Uma ferramenta muito útil para isso é o <strong>Ninite</strong>.</p>
+                    
+                    <div class="info-box">
+                        <h4>O que é o Ninite?</h4>
+                        <p>O Ninite (<a href="https://ninite.com/" target="_blank" rel="noopener noreferrer">https://ninite.com/</a>) é um serviço gratuito que permite baixar e instalar vários programas populares de uma só vez, sem propagandas ou softwares indesejados.</p>
+                        <h4>Como usar o Ninite:</h4>
+                        <ol>
+                            <li>Acesse o site ninite.com</li>
+                            <li>Marque as caixinhas dos programas que deseja instalar</li>
+                            <li>Clique em "Get Your Ninite" (Pegue seu Ninite)</li>
+                            <li>Baixe o instalador</li>
+                            <li>Execute o arquivo baixado</li>
+                            <li>Aguarde a instalação automática de todos os programas selecionados</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="image-container">
+                        <img src="./imagens/site-ninite.png" alt="Site do Ninite para selecionar e baixar programas essenciais" loading="lazy">
+                        <p class="image-caption">Site do Ninite para selecionar e baixar programas essenciais</p>
+                    </div>
+                    
+                    <h3>5. Conectar à Rede</h3>
+                    <p>Se você ainda não conectou à internet durante a instalação, faça isso agora. Para redes Wi-Fi, clique no ícone de rede na barra de tarefas e selecione sua rede. Para redes cabeadas, basta conectar o cabo Ethernet (geralmente azul) ao computador.</p>
+                    
+                    <h3>6. Restaurar seus Backups</h3>
+                    <p>Agora é o momento de copiar de volta todos os arquivos que você fez backup antes de formatar o computador. Certifique-se de verificar se todos os seus documentos, fotos, vídeos e outros arquivos importantes foram restaurados corretamente.</p>
+                </div>
+            </article>
+
+            <!-- Google AdSense Placeholder 6 -->
+            <div class="ad-container" id="ad-slot-6">
+                <!-- Seu código do Google AdSense aqui -->
+            </div>
+
+            <!-- Conclusão -->
+            <article class="content-section" id="conclusao">
+                <header class="section-header">
+                    <h2>Conclusão: Mantenha seu PC Rápido e Seguro</h2>
+                </header>
+                <div class="section-body">
+                    <p>Parabéns! Você concluiu com sucesso o processo de formatação do seu computador e reinstalação do Windows. Com este guia detalhado, você agora possui o conhecimento para resolver problemas comuns de software e manter seu sistema limpo e rápido.</p>
+                    
+                    <div class="info-box">
+                        <h4>Dicas Finais para Manter seu PC em Ótimo Estado:</h4>
+                        <ul>
+                            <li><strong>Faça backups regulares:</strong> Use serviços de nuvem (Google Drive, OneDrive, Dropbox) ou discos externos para fazer cópias de segurança dos seus arquivos importantes regularmente.</li>
+                            <li><strong>Mantenha o sistema atualizado:</strong> Sempre instale as atualizações do Windows e dos seus programas para garantir segurança e desempenho.</li>
+                            <li><strong>Use um antivírus confiável:</strong> Mantenha seu antivírus sempre atualizado e faça varreduras regulares.</li>
+                            <li><strong>Evite programas desnecessários:</strong> Não instale programas que você não precisa, pois eles podem deixar seu computador mais lento.</li>
+                            <li><strong>Limpe arquivos temporários:</strong> Use o "Limpeza de Disco" do Windows regularmente para remover arquivos desnecessários.</li>
+                            <li><strong>Desfragmente o disco:</strong> Se você usa HD (não SSD), desfragmente o disco regularmente para melhorar o desempenho.</li>
+                        </ul>
+                    </div>
+                    
+                    <p>Lembre-se sempre de que a formatação é uma solução poderosa para muitos problemas, mas também é um processo que requer cuidado e atenção. Sempre faça backups antes de qualquer procedimento que possa resultar em perda de dados.</p>
+                    
+                    <div class="alert alert-success">
+                        <strong>Obrigado por seguir este guia!</strong> Esperamos que ele tenha sido útil e que seu computador esteja funcionando perfeitamente agora. Se você tiver dúvidas ou precisar de ajuda adicional, não hesite em procurar suporte técnico qualificado.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Navegação entre artigos -->
+            <nav class="article-navigation">
+                <a href="#preparativos" class="nav-link">← Voltar ao Início</a>
+                <a href="#inicio" class="nav-link">Ir para o Topo ↑</a>
+            </nav>
+        </div>
+    </main>
+
+    <!-- Sidebar (opcional para widgets, links relacionados, etc.) -->
+    <aside class="sidebar">
+        <div class="widget">
+            <h3>Navegação Rápida</h3>
+            <ul class="quick-links">
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#preparativos">Preparativos</a></li>
+                <li><a href="#rufus">Rufus</a></li>
+                <li><a href="#boot">Configuração de Boot</a></li>
+                <li><a href="#instalacao">Instalação</a></li>
+                <li><a href="#pos-formatacao">Pós-Formatação</a></li>
+                <li><a href="#conclusao">Conclusão</a></li>
+            </ul>
+        </div>
+        
+        <!-- Google AdSense Sidebar -->
+        <div class="widget ad-widget">
+            <div class="ad-container" id="ad-slot-sidebar">
+                <!-- Seu código do Google AdSense aqui -->
+            </div>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Guia Windows</h3>
+                    <p>Seu guia completo para formatar e reinstalar o Windows de forma segura e profissional.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Úteis</h3>
+                    <ul>
+                        <li><a href="https://www.microsoft.com/pt-br/software-download/windows10" target="_blank" rel="noopener noreferrer">Download Windows 10</a></li>
+                        <li><a href="https://www.microsoft.com/pt-br/software-download/windows11" target="_blank" rel="noopener noreferrer">Download Windows 11</a></li>
+                        <li><a href="https://rufus.ie/pt/" target="_blank" rel="noopener noreferrer">Download Rufus</a></li>
+                        <li><a href="https://ninite.com/" target="_blank" rel="noopener noreferrer">Ninite</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Aviso Legal</h3>
+                    <p>Este guia é fornecido apenas para fins educacionais. Sempre faça backup dos seus dados antes de formatar seu computador.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Guia Windows. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão de Voltar ao Topo -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        ↑
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
+
