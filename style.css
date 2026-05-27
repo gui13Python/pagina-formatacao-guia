@@ -96,6 +96,7 @@ body {
     background-color: var(--bg-secondary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 /* ===================================
@@ -471,11 +472,10 @@ li {
     font-size: var(--font-size-sm);
     color: var(--text-light);
     font-style: italic;
-    
 }
 
 /* ===================================
-   Google AdSense
+   Google AdSense (CORRIGIDO)
    =================================== */
 
 .ad-container {
@@ -484,10 +484,19 @@ li {
     background-color: var(--bg-secondary);
     border-radius: var(--border-radius-md);
     text-align: center;
-    min-height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 280px;
+    
+    /* Correção do Flexbox que causava availableWidth=0 */
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Força os anúncios responsivos a expandirem corretamente */
+.ad-container ins.adsbygoogle {
+    display: block !important;
+    width: 100% !important;
+    min-width: 250px !important;
 }
 
 /* ===================================
@@ -669,9 +678,8 @@ li {
 }
 
 /* ===================================
-   Responsividade
+   Responsividade e IDs Customizados
    =================================== */
-
 
 .image-container img {
     max-width: 100%;
@@ -682,30 +690,23 @@ li {
     background-color: transparent;
 }
 
-
-#atencao{
+#atencao {
     color: var(--aqui-color);
     font-size: 16px;
     font-weight: bold;
 }
 
-#pd{
-    color: var(blue);
+#pd {
+    color: blue;
     font-size: 16px;
     font-weight: bold;
 }
 
-
-
-#red{
+#red {
     color: var(--aqui-color);
 }
 
-
-
-
-
-#seta2{
+#seta2 {
     animation: bounce 2s infinite;
     margin-left: 10px;
 }
@@ -716,21 +717,19 @@ li {
     font-weight: bold;
 }
 
-
-
-#versao_exemplo{
+#versao_exemplo {
     color: rgb(84, 87, 252);
     font-size: 10px;
     font-weight: bold;
 }
 
-#md{
+#md {
     color: rgb(84, 87, 252);
     font-size: 16px;
     font-weight: bold;
 }
 
-#descricaop{
+#descricaop {
     text-align: justify;
     text-justify: inter-word;
     color: rgb(156, 154, 154);
@@ -875,13 +874,11 @@ li {
    Acessibilidade
    =================================== */
 
-/* Foco visível para navegação por teclado */
 a:focus, button:focus {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
 }
 
-/* Redução de movimento para usuários com preferências de acessibilidade */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -918,65 +915,32 @@ a:focus, button:focus {
         color: var(--text-primary);
     }
 
-
     img {
-    max-width: 100%;
-    height: auto; /* Mantém a proporção da imagem */
-}
+        max-width: 100%;
+        height: auto;
+    }
 
     .image-container img {
         border-radius: 0;
         box-shadow: none;
     }
-
-
-
-
-
-
 }
-
-
 
 @media (max-width: 470px) {
-    #atencao{
-        font-size: 14px;
-    }
-    #pd{
-        font-size: 14px;
-    }
-    #red{
-        font-size: 14px;
-    }
-    #md{
-        font-size: 14px;
-    }
+    #atencao { font-size: 14px; }
+    #pd { font-size: 14px; }
+    #red { font-size: 14px; }
+    #md { font-size: 14px; }
 
-    img{
+    img { width: 100%; }
+    .seta2 { width: 2rem; }
+
+    html, body { overflow-x: hidden; }
+
+    .site-footer {
         width: 100%;
+        height: auto;
+        max-width: 100%;
+        margin-top: 1rem;
     }
-
-    .seta2{
-        width: 2rem;
-    }
-
-    html, body {
-    overflow-x: hidden;
-}
-
-.site-footer {
-    width: 100%;
-    height: auto;
-    padding: auto;
-    max-width: 100%;
-    margin-top: 1rem;
-
-
-
-}
-
-
-
-
-
 }

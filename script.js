@@ -217,13 +217,16 @@ function animateOnScroll() {
     const elements = document.querySelectorAll('.content-section, .alert, .info-box, .step-by-step');
     
     if ('IntersectionObserver' in window) {
+        // Define estado inicial ANTES de observar, para não piscar
+        elements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '0';
-                    entry.target.style.transform = 'translateY(20px)';
-                    entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                    
                     setTimeout(() => {
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'translateY(0)';
@@ -567,4 +570,3 @@ document.addEventListener('DOMContentLoaded', trackExternalLinks);
 // ===================================
 
 console.log('Blog Windows - Script carregado com sucesso!');
-
