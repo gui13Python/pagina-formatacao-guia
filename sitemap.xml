@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página Inicial -->
+  <url>
+    <loc>https://pagina-formatacao-guia.vercel.app/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pagina-formatacao-guia.vercel.app/index.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Categorias / Páginas do Menu -->
+  <url>
+    <loc>https://pagina-formatacao-guia.vercel.app/artigos/economia-domestica.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pagina-formatacao-guia.vercel.app/artigos/organizacao-casa.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pagina-formatacao-guia.vercel.app/artigos/produtividade-diaria.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pagina-formatacao-guia.vercel.app/artigos/tecnologia-basica.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Páginas Institucionais -->
+  <url>
+    <loc>https://pagina-formatacao-guia.vercel.app/sobre.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pagina-formatacao-guia.vercel.app/contato.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pagina-formatacao-guia.vercel.app/privacidade.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://pagina-formatacao-guia.vercel.app/termos.html</loc>
+    <priority>0.3</priority>
+  </url>
+</urlset>
