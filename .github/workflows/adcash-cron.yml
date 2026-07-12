@@ -1,0 +1,31 @@
+name: Adcash Anti-Adblock Cron
+
+on:
+  schedule:
+    # Roda a cada 1 hora (Para não estourar o limite de 100 deploys diários da Vercel)
+    - cron: '0 * * * *'
+  workflow_dispatch: # Permite rodar manualmente clicando em um botão
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v4
+
+    - name: Configurar Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-node-version: 20
+
+    - name: Executar atualização do Script
+      run: node atualizar-adcash.js
+
+    - name: Commit e Push para o GitHub
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add adcash-zone.js
+        
+        # Só atualiza se o conteúdo do Adcash tiver mudado
+        git diff --quiet && git diff --staged --quiet || (git commit -m "chore: adcash script update [skip ci]" && git push)
